@@ -1,4 +1,4 @@
-package com.java.project;
+
 
 
 import javax.swing.*;
@@ -12,35 +12,59 @@ abstract public class CampsDescription {
     private Container c;
 
 
+    /**
+     * @wbp.parser.entryPoint
+     */
     public CampsDescription() {
 
 
     }
 
+    /**
+     * @wbp.parser.entryPoint
+     */
     public String getCampName() {
         return campName;
     }
 
+    /**
+     * @wbp.parser.entryPoint
+     */
     public void setCampName(String campName) {
         this.campName = campName;
     }
 
+    /**
+     * @wbp.parser.entryPoint
+     */
     public String getCampDescription() {
         return campDescription;
     }
 
+    /**
+     * @wbp.parser.entryPoint
+     */
     public void setCampDescription(String campDescription) {
         this.campDescription = campDescription;
     }
 
+    /**
+     * @wbp.parser.entryPoint
+     */
     public Double getCampPrice() {
         return campPrice;
     }
 
+    /**
+     * @wbp.parser.entryPoint
+     */
     public void setCampPrice(Double campPrice) {
         this.campPrice = campPrice;
     }
 
+    /**
+     * @wbp.parser.entryPoint
+     */
     public void printInfo(){
 
         System.out.println("--------------------------CAMP DETAILS-------------------------------");
@@ -50,6 +74,9 @@ abstract public class CampsDescription {
 
     }
 
+    /**
+     * @wbp.parser.entryPoint
+     */
     public String getCampInfo() {
         return "\n--------------------------CAMP DETAILS-------------------------------\nYou have enrolled to " + getCampName() +
                 " camp\nPrice of Camp  - RM " + getCampPrice()+

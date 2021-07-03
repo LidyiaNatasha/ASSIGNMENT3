@@ -1,6 +1,7 @@
-package com.java.project;
+
 
 import javax.swing.*;
+
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.MatteBorder;
 import javax.swing.table.DefaultTableModel;
@@ -53,13 +54,85 @@ public class FacilitatorGUI extends JFrame {
     public FacilitatorGUI() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 966, 584);
+        
+        JMenuBar menuBar = new JMenuBar();
+        setJMenuBar(menuBar);
+        
+        JMenu AboutUs = new JMenu("About Us");
+        AboutUs.setFont(new Font("Segoe UI", Font.BOLD, 18));
+        menuBar.add(AboutUs);
+        
+        JMenu EducationDayCamps = new JMenu("Education Day Camps");
+        EducationDayCamps.setFont(new Font("Segoe UI", Font.PLAIN, 15));
+        EducationDayCamps.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		EducationDayCamps frame = new EducationDayCamps();
+				frame.setVisible(true);
+        	}
+        });
+        AboutUs.add(EducationDayCamps);
+        
+        JMenu Financial = new JMenu("Financial");
+        Financial.setFont(new Font("Segoe UI", Font.BOLD, 18));
+        menuBar.add(Financial);
+        
+        JMenuItem Finance = new JMenuItem("Finance");
+        Finance.setFont(new Font("Segoe UI", Font.PLAIN, 15));
+        Finance.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		Finance frame = new Finance();
+				frame.setVisible(true);
+        	}
+        });
+        Financial.add(Finance);
+        
+        JMenuItem Sales = new JMenuItem("Sales");
+        Sales.setFont(new Font("Segoe UI", Font.PLAIN, 15));
+        Sales.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		Sales frame = new Sales();
+				frame.setVisible(true);
+        	}
+        });
+        Financial.add(Sales);
+        
+        JMenuItem Advertisement = new JMenuItem("Advertisement");
+        Advertisement.setFont(new Font("Segoe UI", Font.PLAIN, 15));
+        Advertisement.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		Advertisement frame = new Advertisement();
+				frame.setVisible(true);
+        	}
+        });
+        Financial.add(Advertisement);
+        
+        JMenu Facilitator = new JMenu("Facilitator");
+        Facilitator.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		 FacilitatorGUI frame = new FacilitatorGUI();
+                 frame.setVisible(true);
+                 frame.setLocationRelativeTo(null);
+        	}
+        });
+        Facilitator.setFont(new Font("Segoe UI", Font.BOLD, 18));
+        menuBar.add(Facilitator);
+        
+        JMenu Participant = new JMenu("Participant");
+        Participant.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		ParticipantRegistration frame = new ParticipantRegistration();
+                frame.setVisible(true);
+        	}
+        });
+        Participant.setFont(new Font("Segoe UI", Font.BOLD, 18));
+        menuBar.add(Participant);
         contentPane = new JPanel();
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
         setContentPane(contentPane);
         contentPane.setLayout(null);
 
         JPanel panel = new JPanel();
-        panel.setBackground(new Color(222, 184, 135));
+        panel.setBackground(new Color(95, 158, 160));
         panel.setBorder(new MatteBorder(5, 5, 5, 5, (Color) Color.MAGENTA));
         panel.setBounds(10, 10, 932, 537);
         contentPane.add(panel);
@@ -68,7 +141,7 @@ public class FacilitatorGUI extends JFrame {
         JPanel panel_1 = new JPanel();
         panel_1.setLayout(null);
         panel_1.setBorder(new MatteBorder(5, 5, 5, 5, (Color) Color.MAGENTA));
-        panel_1.setBackground(new Color(222, 184, 135));
+        panel_1.setBackground(new Color(95, 158, 160));
         panel_1.setBounds(34, 105, 294, 334);
         panel.add(panel_1);
 
@@ -151,7 +224,7 @@ public class FacilitatorGUI extends JFrame {
 
         JPanel panel_1_2 = new JPanel();
         panel_1_2.setBorder(new MatteBorder(5, 5, 5, 5, (Color) Color.MAGENTA));
-        panel_1_2.setBackground(new Color(222, 184, 135));
+        panel_1_2.setBackground(new Color(95, 158, 160));
         panel_1_2.setBounds(350, 105, 553, 334);
         panel.add(panel_1_2);
         panel_1_2.setLayout(null);
@@ -170,19 +243,19 @@ public class FacilitatorGUI extends JFrame {
         JPanel panel_1_1_1 = new JPanel();
         panel_1_1_1.setLayout(null);
         panel_1_1_1.setBorder(new MatteBorder(5, 5, 5, 5, (Color) Color.MAGENTA));
-        panel_1_1_1.setBackground(new Color(222, 184, 135));
+        panel_1_1_1.setBackground(new Color(95, 158, 160));
         panel_1_1_1.setBounds(34, 20, 869, 70);
         panel.add(panel_1_1_1);
 
         JLabel lblNewLabel_1 = new JLabel("Facilitator Registration");
         lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 35));
-        lblNewLabel_1.setBounds(175, 10, 585, 50);
+        lblNewLabel_1.setBounds(260, 10, 386, 50);
         panel_1_1_1.add(lblNewLabel_1);
 
         JPanel panel_1_1_1_1 = new JPanel();
         panel_1_1_1_1.setLayout(null);
         panel_1_1_1_1.setBorder(new MatteBorder(5, 5, 5, 5, (Color) Color.MAGENTA));
-        panel_1_1_1_1.setBackground(new Color(222, 184, 135));
+        panel_1_1_1_1.setBackground(new Color(95, 158, 160));
         panel_1_1_1_1.setBounds(34, 449, 869, 70);
         panel.add(panel_1_1_1_1);
 
@@ -274,7 +347,7 @@ public class FacilitatorGUI extends JFrame {
             public void actionPerformed(ActionEvent e) {
 
                 getContentPane().setVisible(true);
-                AdvertisementGUI AdFrame = new AdvertisementGUI();
+                Advertisement AdFrame = new Advertisement();
                 AdFrame.setVisible(true);
                 AdFrame.setTitle("Admin | Advertisement");
                 AdFrame.setVisible(true);

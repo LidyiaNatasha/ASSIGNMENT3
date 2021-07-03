@@ -1,4 +1,4 @@
-package com.java.project;
+
 
 
 import java.util.Scanner;
@@ -89,3 +89,4 @@ public class Registration extends CampsDescription implements Payment {
 
 
 }
+
